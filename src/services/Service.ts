@@ -5,7 +5,7 @@ export const api = axios.create({
 })
 
 // /usuarios/logar
-export const Login = async (url, dados, setDado) => {
+export const Login = async (url: any, dados: any, setDado: any) => {
     const resposta = await api.post(url, dados)
     setDado(resposta.data)
 }
