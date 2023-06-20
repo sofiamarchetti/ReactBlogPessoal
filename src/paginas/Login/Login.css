@@ -1,3 +1,16 @@
-.text-decorator-none{
+.textos1 {
+    font-weight: bold !important;
+}
+
+.imagem {
+    background-image: url(https://images.unsplash.com/photo-1686418644250-c87093e9089e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=401&q=80);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-decorator-none {
     text-decoration: none;
 }
