@@ -1,9 +1,23 @@
-.titulo{
-    color: blueviolet;
-    text-align: center;
+.caixa {
+    background-color: #bd0505;
 }
 
-.img{
+.titulo {
+    color: #f99526 !important;
+    font-weight: bold !important;
+}
+
+.botao {
+    border-color: white !important;
+    background-color: #e5005f;
+    color: #f99526 !important;
+}
+
+.postagens {
+    background-color: antiquewhite;
+}
+
+.img {
     width: 500px;
     height: 500px;
     display: block;
