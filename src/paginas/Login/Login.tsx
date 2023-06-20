@@ -13,6 +13,7 @@ function Login() {
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{fontWeight: 'bold'}}>Entrar</Typography>
                         <TextField id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='text-decorator-none'>
                                 <Button type='submit' variant='contained' color='primary'>
@@ -21,14 +22,17 @@ function Login() {
                             </Link>
                         </Box>
                     </form>
+
                     <Box display='flex' justifyContent='center' marginTop={2}>
                         <Box marginRight={1}>
+                            {/*gutterBottom é a margem que fica abaixo*/}
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
-                        <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }}>Cadastre-se</Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' style={{fontWeight: 'bold'}}>Cadastre-se</Typography>
                     </Box>
                 </Box>
             </Grid>
+
             <Grid xs={6} style={{
                 backgroundImage: `url(https://images.unsplash.com/photo-1686418644250-c87093e9089e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=401&q=80)`,
                 backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
