@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import UserLogin from '../../models/UserLogin';
 
 function Login() {
+
+    const [userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            usuario: '',
+            senha: '',
+            token: ''
+        })
+
+        function updatedModel(e: ChangeEvent<HTMLInputElement>){
+            
+            setUserLogin({
+                ... userLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+
+        useLocalStorage
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
@@ -29,7 +49,7 @@ function Login() {
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
 
-                        <Link to='/cadastrousuario'>                    
+                        <Link to='/cadastrousuario'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
                         </Link>
                     </Box>
