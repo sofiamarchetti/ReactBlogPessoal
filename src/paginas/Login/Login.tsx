@@ -1,12 +1,15 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
-import { Link } from 'react-router-dom';
-import './Login.css';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { api } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
+import './Login.css';
 
 function Login() {
-
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
@@ -15,18 +18,30 @@ function Login() {
             token: ''
         })
 
-        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
 
-            setUserLogin({
-                ...userLogin,
-                [e.target.name]: e.target.value
-            })
+    useEffect(() => {
+        if (token != '') {
+            history.push('/home')
         }
+    }, [token])
 
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-            e.preventDefault();
-            console.log('userLogin: '+userLogin);
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            const resposta = await api.post(`/usuarios/logar`, userLogin)
+            setToken(resposta.data.token)
+
+            alert('Usuário logado com sucesso!');
+        } catch (error) {
+            alert('Dados do usuário não encontrados. Erro ao logar.');
         }
+    }
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -38,11 +53,9 @@ function Login() {
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
 
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='text-decorator-none'>
-                                <Button type='submit' variant='contained' color='primary'>
-                                    Logar
-                                </Button>
-                            </Link>
+                            <Button type='submit' variant='contained' color='primary'>
+                                Logar
+                            </Button>
                         </Box>
                     </form>
 
