@@ -44,3 +44,6 @@ function ListaTema() {
 }
 
 export default ListaTema;
+
+// Camada: ListaTema.tsx
+// FeedBack: faltou useState,
