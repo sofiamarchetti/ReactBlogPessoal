@@ -19,7 +19,3 @@ export const api = axios.create({
         const resposta = await api.get(url, header)
         setDado(resposta.data)
     }
-
-
-//     Camada: Service.ts (React)
-// FeedBack: faltou await api.delete,
