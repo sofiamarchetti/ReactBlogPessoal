@@ -69,3 +69,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// navbarComponent, dispatch

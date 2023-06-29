@@ -45,3 +45,5 @@ function Footer() {
 }
 
 export default Footer;
+
+// footerComponent
