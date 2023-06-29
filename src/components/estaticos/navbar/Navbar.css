@@ -1,8 +1,39 @@
-.cursor{
-    cursor: pointer;
-    color: #fee268;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito&family=Poppins&family=Roboto&display=swap');
+
+.blogSofia {
+    font-family: 'Comfortaa', cursive !important;
 }
 
-.text-decorator-none{
+.cursor {
+    cursor: pointer;
+    color: #fee268;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.cursor:hover {
+    background-color: #F99526;
+    color: #fee268;
+    padding: 0.5em;
+}
+
+.cursorLog {
+    background-color: #E5005F;
+    padding: 0.1em 0.6em;
+    border-radius: 1em;
+    color: antiquewhite;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.text-decorator-none {
     text-decoration: none;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.toolbar {
+    background-color: #bd0505;
+    display: flex;
+    justify-content: space-between;    
+    border-radius: 0 5px 5px 0 solid #ff7b00 !important;
+    font-family: 'Poppins', sans-serif !important;
 }

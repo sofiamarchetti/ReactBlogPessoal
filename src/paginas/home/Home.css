@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Roboto&display=swap');
+
 .caixa {
     background-color: #bd0505;
 }
@@ -5,12 +7,22 @@
 .titulo {
     color: #f99526 !important;
     font-weight: bold !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitulo {
+    color: antiquewhite !important;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1em !important;
 }
 
 .botao {
-    border-color: white !important;
-    background-color: #e5005f;
-    color: #f99526 !important;
+    border-color: antiquewhite !important;
+    background-color: #e5005f !important;
+    color: #F99526 !important;
+    font-weight: bold !important;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 3em !important;
 }
 
 .postagens {

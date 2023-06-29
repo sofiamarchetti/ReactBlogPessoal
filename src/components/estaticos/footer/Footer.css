@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Roboto&display=swap');
+
 .box1 {
     background-color: #e5005f;
-    height: 120px;
+    height: 120px;    
+    background-repeat: no-repeat;
+    background-size: 100%;    
 }
 
 .box2 {
@@ -15,4 +19,5 @@
 
 .textos {
     color: #fee268;
+    font-family: 'Poppins', sans-serif !important;
 }

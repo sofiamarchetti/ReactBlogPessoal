@@ -71,7 +71,7 @@ function DeletarTema() {
                   Sim
                 </Button>
               </Box>
-              
+
               <Box mx={2}>
                 <Button onClick={nao} variant="contained" size='large' color="secondary">
                   Não

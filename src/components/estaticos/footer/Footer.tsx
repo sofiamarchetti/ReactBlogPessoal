@@ -14,6 +14,7 @@ function Footer() {
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom className='textos'>Me acompanhe nas redes sociais</Typography>
                         </Box>
+
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://github.com/sofiamarchetti/" target="_blank">
                                 <GitHubIcon className='redes-sociais'/>
@@ -26,13 +27,14 @@ function Footer() {
                             </a>
                         </Box>
                     </Box>
+
                     <Box className='box2'>
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom className='textos'>Sofia Marchetti ©2023</Typography>
                         </Box>
                         <Box>
                             <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">brasil.generation.org</Typography>
+                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">Generation Brazil</Typography>
                             </a>
                         </Box>
                     </Box>

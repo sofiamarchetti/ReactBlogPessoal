@@ -10,8 +10,8 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Olá, boas vindas!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Utilize esse espaço para expressar os seus pensamentos e opiniões</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Olá, boas vindas! 🙃</Typography>
+                        <Typography variant="h5" gutterBottom component="h5" align="center" className='subtitulo'>Utilize esse espaço para expressar os seus pensamentos e opiniões (ou falar sozinhe mesmo)</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
@@ -20,7 +20,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=628&q=80" alt="Foto de uma biblioteca com as luzes acesas" width="500px" height="500px" />
+                    <img src="/src/assets/images/Rumos Artes Visuais-RJ{14 mar 2013} (25).JPG" alt="Foto de uma obra de arte contemporânea: um letreiro em neon branco sobre parede preta, com os dizeres: e quem não quiser crer, que o venha experimentar" style={{borderRadius: '3em'}}/>
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

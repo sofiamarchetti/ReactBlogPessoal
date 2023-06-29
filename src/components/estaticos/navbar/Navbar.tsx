@@ -18,11 +18,11 @@ function Navbar() {
 
     return (
         <>
-            <AppBar position="static" style={{backgroundColor:"#bd0505"}}>
-                <Toolbar variant="dense">
-                    <Box className='cursor'>
+            <AppBar position="static">
+                <Toolbar variant="dense" className='toolbar'>
+                    <Box className='blogSofia'>
                         <Typography variant="h5">
-                            BlogPessoal
+                            Blog da Sofia
                         </Typography>
                     </Box>
 
@@ -56,9 +56,9 @@ function Navbar() {
                             </Box>
                         </Link>
 
-                        <Box mx={1} className='cursor' onClick={goLogout}>
-                            <Typography variant="h6" style={{backgroundColor:"#E5005F"}}>
-                                Logout
+                        <Box mx={1} className='cursorLog' onClick={goLogout}>
+                            <Typography variant="h6">
+                                Login/Logout
                             </Typography>
                         </Box>
                     </Box>
