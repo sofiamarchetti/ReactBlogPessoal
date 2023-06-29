@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Roboto&display=swap');
+
 .imagem2 {
-    background-image: url(https://images.unsplash.com/photo-1686418644250-c87093e9089e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=401&q=80);
+    background-image: url(/src/assets/images/FotoRetro\ -007.jpg);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -9,9 +11,12 @@
 
 .textos2 {
     font-weight: bold !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btnCancelar{
     margin-right: 20px !important;
+    background-color: #bd0505 !important;
+    color: white !important;
+    font-family: 'Poppins', sans-serif;
 }
-
