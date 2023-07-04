@@ -2,9 +2,10 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom'
 import './CadastroTema.css'
-import useLocalStorage from 'react-use-localstorage'
 import Tema from '../../../models/Tema'
 import { buscaId, post, put } from '../../../services/Service'
+import { useSelector } from 'react-redux'
+import { TokenState } from '../../../store/tokens/tokensReducer'
 
 function CadastroTema() {
 
@@ -12,7 +13,9 @@ function CadastroTema() {
 
     const { id } = useParams<{ id: string }>();
 
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     const [tema, setTema] = useState<Tema>({
         id: 0,
@@ -79,7 +82,7 @@ function CadastroTema() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" component="h1" align="center">Formulário de cadastro de temas</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="Escreva aqui o novo tema" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" style={{backgroundColor: '#FEE268', color: '#A93410'}}>
+                <Button type="submit" variant="contained" style={{ backgroundColor: '#FEE268', color: '#A93410' }}>
                     Finalizar
                 </Button>
             </form>
