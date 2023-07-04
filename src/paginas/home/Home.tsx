@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid, Button, Box } from '@material-ui/core';
 import './Home.css';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import { useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
 
 function Home() {
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+
+    useEffect(() => {
+        if (token == "") {
+            alert("Você precisa estar logado")
+            navigate("/login")
+
+        }
+    }, [token])
+
     return (
         // Precisa fazer um container pra retornar somente um elemento aqui (<> é um Fragment):
         <>
@@ -15,12 +29,13 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem />
                         </Box>
                         <Button variant="outlined" className='botao'>Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="/src/assets/images/Rumos Artes Visuais-RJ{14 mar 2013} (25).JPG" alt="Foto de uma obra de arte contemporânea: um letreiro em neon branco sobre parede preta, com os dizeres: e quem não quiser crer, que o venha experimentar" style={{borderRadius: '3em'}}/>
+                    <img src="/src/assets/images/Rumos Artes Visuais-RJ{14 mar 2013} (25).JPG" alt="Foto de uma obra de arte contemporânea: um letreiro em neon branco sobre parede preta, com os dizeres: e quem não quiser crer, que o venha experimentar" style={{ borderRadius: '3em' }} />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />
