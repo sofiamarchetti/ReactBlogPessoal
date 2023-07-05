@@ -28,3 +28,7 @@
 .postagens {
     background-color: antiquewhite;
 }
+
+.text-decorator-none {
+    text-decoration: none;
+}
