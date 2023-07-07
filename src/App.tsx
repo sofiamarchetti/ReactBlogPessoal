@@ -15,7 +15,7 @@ import Footer from './components/estaticos/footer/Footer';
 import Navbar from './components/estaticos/navbar/Navbar';
 import ListaTema from './components/temas/listatema/ListaTema';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
-import Login from './paginas/login/login';
+import Login from './paginas/Login/Login';
 
 function App() {
   return (
